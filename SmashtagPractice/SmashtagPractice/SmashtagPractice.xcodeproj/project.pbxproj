@@ -12,6 +12,7 @@
 		355A701A1D9AB99800167655 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 355A70191D9AB99800167655 /* Assets.xcassets */; };
 		355A701D1D9AB99800167655 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355A701B1D9AB99800167655 /* LaunchScreen.storyboard */; };
 		355A70261D9AB9E400167655 /* TweeterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355A70251D9AB9E400167655 /* TweeterTableViewController.swift */; };
+		35780AAE1D9C38320074C260 /* TweeterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35780AAD1D9C38320074C260 /* TweeterTableViewCell.swift */; };
 		35C690501D9ACD4300D638D6 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C6904F1D9ACD4300D638D6 /* Twitter.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		355A701C1D9AB99800167655 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		355A701E1D9AB99800167655 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		355A70251D9AB9E400167655 /* TweeterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweeterTableViewController.swift; sourceTree = "<group>"; };
+		35780AAD1D9C38320074C260 /* TweeterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweeterTableViewCell.swift; sourceTree = "<group>"; };
 		35C6904F1D9ACD4300D638D6 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/TweeterExample-eacrzmccfzrxtfcesquondcrtqwz/Build/Products/Debug-iphoneos/Twitter.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +62,7 @@
 			children = (
 				355A70241D9AB9B200167655 /* SupportingFiles */,
 				355A70161D9AB99800167655 /* Main.storyboard */,
+				35780AAD1D9C38320074C260 /* TweeterTableViewCell.swift */,
 				355A70251D9AB9E400167655 /* TweeterTableViewController.swift */,
 				355A701E1D9AB99800167655 /* Info.plist */,
 			);
@@ -150,6 +153,7 @@
 			files = (
 				355A70261D9AB9E400167655 /* TweeterTableViewController.swift in Sources */,
 				355A70131D9AB99800167655 /* AppDelegate.swift in Sources */,
+				35780AAE1D9C38320074C260 /* TweeterTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

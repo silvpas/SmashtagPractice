@@ -9,8 +9,15 @@
 import UIKit
 import Twitter
 
-class TweeterTableViewController: UITableViewController
+class TweeterTableViewController: UITableViewController, UITextFieldDelegate
 {
+    @IBOutlet weak var searchTextField: UITextField!{
+        didSet{
+            searchTextField.delegate = self
+            searchTextField.text = searchText
+        }
+    }
+  
     //1 - Create data structure to hold data
     var tweets = [Array<Twitter.Tweet>]() {
         didSet{
@@ -24,6 +31,14 @@ class TweeterTableViewController: UITableViewController
             searchTweets()
             title = searchText
         }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if let textFieldContent = searchTextField.text where !textFieldContent.isEmpty{
+            searchText = textFieldContent
+        }
+        self.searchTextField.resignFirstResponder()
+        return true
     }
     
     var twiterRequest : Twitter.Request? {
@@ -57,6 +72,9 @@ class TweeterTableViewController: UITableViewController
         super.viewDidLoad()
         searchText = "#stanford"
 
+        tableView.estimatedRowHeight = tableView.rowHeight
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -85,8 +103,11 @@ class TweeterTableViewController: UITableViewController
         let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.TweeterCell, forIndexPath: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = tweets[indexPath.section][indexPath.row].text
-        cell.detailTextLabel?.text = tweets[indexPath.section][indexPath.row].user.name
+      //  cell.textLabel?.text = tweets[indexPath.section][indexPath.row].text
+       // cell.detailTextLabel?.text = tweets[indexPath.section][indexPath.row].user.name
+        if let tweetCell = cell as? TweeterTableViewCell {
+           tweetCell.tweet = tweets[indexPath.section][indexPath.row]
+        }
         
         return cell
     }
